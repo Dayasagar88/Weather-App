@@ -1,0 +1,281 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* transition: all .3s 0s ease-in-out; */
+}
+.tab.current-tab{
+    background-color: #6b908094;
+    border-radius: 4px;
+    color: black;
+    box-shadow: #000 2px 2px ;
+}
+/* .form-container.active{
+    transform: scaleX(1);
+    scale: 1;
+} */
+body{
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    background: rgb(5,122,152);
+    background: -moz-linear-gradient(170deg, rgba(5,122,152,1) 0%, rgba(206,213,208,1) 100%);
+    background: -webkit-linear-gradient(170deg, rgba(5,122,152,1) 0%, rgba(206,213,208,1) 100%);
+    background: linear-gradient(170deg, rgba(5,122,152,1) 0%, rgba(206,213,208,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#057a98",endColorstr="#ced5d0",GradientType=1);
+}
+
+.wrapper{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: rgba(12, 14, 150, 0.479); */
+    gap: 20px;
+    color: white;
+}
+h1{
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: black;
+    font-family: s;
+    text-transform: uppercase;
+}
+.tab-container{
+    /* width: 90%; */
+    /* max-width: 600px; */
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 300px;
+}
+.tab{
+    color: #eef67dd4;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.097);
+    border-radius: 5px;
+    user-select: none;
+    transition: all .4s 0s ease-in-out;
+    background: #00000053;
+}
+
+.icon1{
+    font-size: 4rem;
+    background-color: #1372b1;
+    padding-top: 17px;
+    width: 100px;
+    height: 100px;
+    color: rgba(255, 255, 255, 0.89);
+    border-radius: 50%;
+    text-shadow: 0px 0px 10px;
+}
+.grant-location-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem ;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    scale: 0;
+}
+.grant-location-container.active{
+    /* display: flex; */
+    scale: 1;
+}
+
+.btn{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #000000a2;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.877);
+    transition: all .2s 0s ease-in;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btn:hover{
+    background: #000;;
+}
+.btn:active{
+    background: white;
+    scale: .92;
+}
+.weather-container{
+    position:relative;
+    width: 40%;
+    
+    text-align: center;
+}
+.form-container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform-origin: left;
+    transition: transform .3s 0s ease-in-out;
+    transform: scaleX(0);
+
+    input{
+        text-align: center;
+        width: 93%;
+        height: 40px;
+        padding: 5px;
+        font-size: 1.1rem;
+        /* background: transparent; */
+        border: none;
+        border-radius: 1.5rem;
+        outline: none;
+        /* overflow: hidden; */
+        background: rgba(255, 255, 255, 0.541);
+        transition: box-shadow .2s 0s ease-in-out;
+    }
+    input::placeholder{
+        color: #0000007e;
+    }
+
+    input:focus{
+        box-shadow: 0px 0px 10px #ffffffce;
+    }
+}
+.form-container.active{
+    transform: scaleX(1);
+}
+.searchBtn{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.541);
+    cursor: pointer;
+    transition: all .2s 0s ease-in;
+}
+.searchBtn:hover{
+    background: rgb(24, 24, 24);
+    color: #ff0055;
+    box-shadow: #ffffffce 0px 0px 10px;
+}
+.searchBtn:active{
+    scale: .9;
+    
+}
+.loading-container{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    color: black;
+    /* scale: 0; */
+    display: none;
+}
+.loading-container p:last-of-type{
+    font-size: 1.2rem;
+    margin: 10px 0px 0px 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.loading-container.active{
+    display: contents;
+}
+
+.user-info-container{
+    margin-top: 50px;
+    color: black;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgba(245, 240, 240, 0.253);
+    border-radius: 20px;
+    padding: 30px;
+    background: #0000004d;
+    transition: transform .3s 0s ease-in-out;
+    transform-origin: right;
+    transform: scaleX(0);
+    /* scale: 0; */
+    /* display: none; */
+}
+.user-info-container.active{
+    transform: scaleX(1);
+    /* margin-top: 50px; */
+    /* scale: 1; */
+}
+
+.name{
+    font-size: 2rem;
+    font-family: fantasy;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+.flag{
+    width: 3rem;
+}
+.weatherDesc{
+    font-size: 1.2rem;
+    font-family: fantasy;
+    margin-top: 20px;
+}
+.weatherIcon{
+    width: 80px;
+    place-self: center;
+}
+.parameter-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.parameter{
+    border: 1px solid rgba(233, 231, 231, 0.308);
+    min-width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: fantasy;
+    border-radius: 15px;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    background: #0000003b;
+    color: rgba(255, 255, 255, 0.753);
+    /* letter-spacing: 2px; */
+    font-size: 1.5rem;
+    padding: 100px 0px;
+
+}
+.temprature{
+    font-size: 2.5rem;
+    font-family: fantasy;
+}
+
+.error-box{
+    position: absolute;
+    top: 100px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.error-box.active{
+    display: flex;
+}
+
+.error-box p{
+    font-size: 1.25rem;
+    color: rgb(3, 3, 3);
+    /* border-bottom: 10px solid black; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* margin block for setting top and bottom margin */

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Weather App</h1>
+
+        <div class="tab-container">
+            <div class="tab" data-userWeather>Your Weather</div>
+            <div class="tab" data-searchWeather>Search Weather</div>
+        </div>
+
+        <div class="weather-container">
+            <!-- Grant Location container -->
+            <div class="grant-location-container">
+
+                <i class="icon1 fa-solid fa-location-dot">
+                </i>
+
+                <p style="font-size: 2rem;">Grant Location Access</p>
+                <p>Allow Access to Get Weather Information</p>
+                <button class="btn" type="submit" data-grantAccess>Grant Access</button>
+
+            </div>
+
+            <!-- search form container -->
+            <form action="" class="form-container" data-searchForm>
+                <input type="text" data-searchInput placeholder="Search For City......"
+                >
+                <button class="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass fa-beat"></i>
+                </button>
+            </form>
+
+            <!-- Loading Container -->
+            <div class="loading-container">
+                <i style="font-size: 100px;" class="fa-solid fa-spinner fa-spin-pulse"></i>
+                <p>Loading...</p>
+            </div>
+
+            <!-- show weather Info -->
+            <div class="user-info-container">
+                
+                <!-- city name and flags -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img class="flag" data-countryIcon>
+                </div>
+                
+                <!-- weather description -->
+                <p class="weatherDesc" data-weatherDesc></p>
+                <!-- weather icon -->
+                <img class="weatherIcon" data-weatherIcon>
+                <!-- Temprature -->
+                <p class="temprature" data-temprature></p>
+
+                <!-- three card - parameter -->
+                <div class="parameter-container">   
+                    <!-- card 1 -->
+                    <div class="parameter">
+                        <i class="fa-solid fa-wind" style="color: #0ccef0; font-size: 4rem;"></i>
+                        <p>Wind Speed</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="parameter">
+                        <img width="80px" src="2903592.png" alt="">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="parameter">
+                        <i class="fa-solid fa-cloud" style="color: #f7f7f7; font-size: 4rem;"></i>
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+                    
+                </div>
+
+                
+
+            </div>
+
+            <div class="error-box">
+                <img width="300px" src="6339698-removebg-preview.png" alt="">
+                <p>City Not Found..</p>
+            </div>
+
+
+        </div>
+
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
